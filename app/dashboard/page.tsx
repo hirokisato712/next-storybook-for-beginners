@@ -28,7 +28,12 @@ async function getChartData() {
  * 売上情報の取得
  */
 async function getDepositData() {
-  return await api<ComponentProps<typeof Dashboard>['deposit']>('/dashboard/deposit');
+  return await Promise.resolve({
+    data: {
+      amount: 3024,
+      date: '2021/3/15',
+    },
+  });
 }
 
 /**
