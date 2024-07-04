@@ -6,7 +6,7 @@ import { DepositData } from './types';
 
 export default function Deposit({ data }: Readonly<DepositData>) {
   return (
-    <Card sx={{ minWidth: 215, minHeight: 300 }} className="relative">
+    <Card className="grow-1 relative flex h-72 w-72 p-2">
       <CardContent>
         <Typography component="h2" variant="h6" color="primary" gutterBottom>
           Recent Deposits

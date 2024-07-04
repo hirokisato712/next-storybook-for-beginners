@@ -10,16 +10,16 @@ export default function Dashboard({
   // propsとして渡す
   console.log(chart, deposit, order);
   return (
-    <div className="flex">
-      <div className="float-left">
+    <div className="grow-1 flex justify-between">
+      <div className="w-[80%]">
         {/* chart */}
         <Chart data={chart.data} />
       </div>
-
-      <div className="float-right">
+      <div>
         {/* deposits */}
         <Deposit data={deposit.data} />
       </div>
+
       <div>{/* recent orders */}</div>
     </div>
   );
