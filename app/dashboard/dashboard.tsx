@@ -8,7 +8,6 @@ export default function Dashboard({
   deposit,
   order,
 }: Readonly<{ chart: ChartData; deposit: DepositData; order: OrderData }>) {
-  // propsとして渡す
   return (
     <>
       <div className="flex justify-between">
