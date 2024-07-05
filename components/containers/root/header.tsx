@@ -1,6 +1,7 @@
 'use client';
 
 import { Menu as MenuIcon } from '@mui/icons-material';
+import NotificationsIcon from '@mui/icons-material/Notifications';
 import { AppBar, Button, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import clsx from 'clsx';
 import { useAtomValue } from 'jotai';
@@ -39,7 +40,7 @@ export default function Header() {
           <MenuIcon />
         </IconButton>
         <Typography component="h1" variant="h6" color="inherit" noWrap className="flex-grow">
-          Header
+          DashBoard
         </Typography>
         <Button
           id="basic-button"
@@ -50,7 +51,7 @@ export default function Header() {
           variant="text"
           color="inherit"
         >
-          アカウント設定
+          <NotificationsIcon />
         </Button>
         <Menu
           id="basic-menu"

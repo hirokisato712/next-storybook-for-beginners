@@ -1,7 +1,8 @@
 'use client';
 
-import { Dashboard, People } from '@mui/icons-material';
+import { Assignment, BarChart, Dashboard, Layers, People, ShoppingCart } from '@mui/icons-material';
 import { List } from '@mui/material';
+import Divider from '@mui/material/Divider';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
@@ -16,13 +17,54 @@ export default function Navigation() {
         <ListItemIcon>
           <Dashboard />
         </ListItemIcon>
-        <ListItemText primary="Top" />
+        <ListItemText primary="Dashboard" />
       </ListItemButton>
-      <ListItemButton component={NextLink} href="/hello" selected={pathname === '/hello'}>
+      <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
+        <ListItemIcon>
+          <ShoppingCart />
+        </ListItemIcon>
+        <ListItemText primary="Order" />
+      </ListItemButton>
+      <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
         <ListItemIcon>
           <People />
         </ListItemIcon>
-        <ListItemText primary="Hello" />
+        <ListItemText primary="Customers" />
+      </ListItemButton>
+      <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
+        <ListItemIcon>
+          <BarChart />
+        </ListItemIcon>
+        <ListItemText primary="Reports" />
+      </ListItemButton>
+      <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
+        <ListItemIcon>
+          <Layers />
+        </ListItemIcon>
+        <ListItemText primary="Integrations" />
+      </ListItemButton>
+      <Divider component="li" />
+      <ListItemButton component={NextLink} href="/" selected={pathname === '/'} disabled={true}>
+        <ListItemIcon></ListItemIcon>
+        <ListItemText primary="Saved reports" />
+      </ListItemButton>
+      <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
+        <ListItemIcon>
+          <Assignment />
+        </ListItemIcon>
+        <ListItemText primary="Current month" />
+      </ListItemButton>
+      <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
+        <ListItemIcon>
+          <Assignment />
+        </ListItemIcon>
+        <ListItemText primary="Last quarter" />
+      </ListItemButton>
+      <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
+        <ListItemIcon>
+          <Assignment />
+        </ListItemIcon>
+        <ListItemText primary="Year-end sale" />
       </ListItemButton>
     </List>
   );
