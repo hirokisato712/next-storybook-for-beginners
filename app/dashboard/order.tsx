@@ -16,7 +16,7 @@ import { OrderData } from './types';
 
 export default function Deposit({ data }: Readonly<OrderData>) {
   return (
-    <Paper className="relative h-[330px] w-[100%] p-2">
+    <Paper className="relative h-[330px] w-full p-2">
       <div>
         <Typography component="h2" variant="h6" color="primary" gutterBottom>
           Recent Orders
