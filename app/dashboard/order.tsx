@@ -40,7 +40,8 @@ export default function Deposit({ data }: Readonly<OrderData>) {
                   <TableCell>
                     {' '}
                     {new Date(row.date).getDate()}{' '}
-                    {new Intl.DateTimeFormat('en-US', { month: 'short' }).format(new Date(row.date))}{' '}
+                    {new Intl.DateTimeFormat('en-US', { month: 'short' }).format(new Date(row.date))}
+                    {', '}
                     {new Date(row.date).getFullYear()}
                   </TableCell>
                   <TableCell>{row.name}</TableCell>
