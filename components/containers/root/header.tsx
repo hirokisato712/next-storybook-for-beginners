@@ -1,7 +1,6 @@
 'use client';
 
-import { Menu as MenuIcon } from '@mui/icons-material';
-import NotificationsIcon from '@mui/icons-material/Notifications';
+import { Menu as MenuIcon, Notifications } from '@mui/icons-material';
 import { AppBar, Button, IconButton, Menu, MenuItem, Toolbar, Typography } from '@mui/material';
 import clsx from 'clsx';
 import { useAtomValue } from 'jotai';
@@ -51,7 +50,7 @@ export default function Header() {
           variant="text"
           color="inherit"
         >
-          <NotificationsIcon />
+          <Notifications />
         </Button>
         <Menu
           id="basic-menu"

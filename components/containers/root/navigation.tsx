@@ -13,7 +13,7 @@ export default function Navigation() {
   const pathname = usePathname();
   return (
     <List component="nav">
-      <ListItemButton component={NextLink} href="/" selected={pathname === '/'}>
+      <ListItemButton component={NextLink} href="/dashboard" selected={pathname === '/dashboard'}>
         <ListItemIcon>
           <Dashboard />
         </ListItemIcon>
