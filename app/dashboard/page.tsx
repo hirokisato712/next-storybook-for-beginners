@@ -35,5 +35,5 @@ async function getDepositData() {
  * 受注データの取得
  */
 async function getOrderData() {
-  return await api<ComponentProps<typeof Dashboard>['order']>('/dashboard/order');
+  return await api<ComponentProps<typeof Dashboard>['order']>('dashboard/order');
 }

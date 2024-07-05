@@ -1,5 +1,6 @@
 import Chart from './chart';
 import Deposit from './deposit';
+import Order from './order';
 import { ChartData, DepositData, OrderData } from './types';
 
 export default function Dashboard({
@@ -7,20 +8,22 @@ export default function Dashboard({
   deposit,
   order,
 }: Readonly<{ chart: ChartData; deposit: DepositData; order: OrderData }>) {
-  // propsとして渡す
-  console.log(chart, deposit, order);
   return (
-    <div className="grow-1 flex justify-between">
-      <div className="w-[80%]">
-        {/* chart */}
-        <Chart data={chart.data} />
+    <>
+      <div className="flex justify-between">
+        <div className="w-[80%]">
+          {/* chart */}
+          <Chart data={chart.data} />
+        </div>
+        <div>
+          {/* deposits */}
+          <Deposit data={deposit.data} />
+        </div>
       </div>
-      <div>
-        {/* deposits */}
-        <Deposit data={deposit.data} />
+      <div className="w-[65%]">
+        {/* recent orders */}
+        <Order data={order.data} />
       </div>
-
-      <div>{/* recent orders */}</div>
-    </div>
+    </>
   );
 }
