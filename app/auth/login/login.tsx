@@ -20,14 +20,7 @@ export default function Login({ onSubmit }: { onSubmit: typeof loginAction }) {
   });
   return (
     <Grid className="grid grid-cols-5">
-      <Container
-        className="col-span-2 bg-cover bg-left bg-no-repeat"
-        style={{
-          backgroundImage: 'url(/login.png)',
-          width: '100%',
-          height: '100vh',
-        }}
-      ></Container>
+      <Container className="col-span-2 h-[100vh] w-[100%] bg-[url(/login.png)] bg-cover bg-left bg-no-repeat"></Container>
 
       <Container component="main" className="relative col-span-3 content-center">
         <Box className="mt-16 flex h-auto flex-col items-center">
