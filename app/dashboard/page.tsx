@@ -8,7 +8,6 @@ export default async function Page() {
   const chart = await getChartData();
   const deposit = await getDepositData();
   const order = await getOrderData();
-  console.log(order);
   return <Dashboard chart={chart} deposit={deposit} order={order} />;
 }
 

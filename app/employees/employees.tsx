@@ -18,6 +18,11 @@ import {
 
 import { EmployeeData } from './type';
 
+function colorCode(color: string) {
+  const colors = 'bg-[' + color + ']';
+  return colors;
+}
+
 export default function Employees({ employee }: Readonly<{ employee: EmployeeData }>) {
   return (
     <>
@@ -49,7 +54,7 @@ export default function Employees({ employee }: Readonly<{ employee: EmployeeDat
                 <TableRow key={row.id}>
                   <TableCell className="font-semibold">
                     <div className="flex items-center">
-                      <Avatar sx={{ bgcolor: row.color }}>{row.initial}</Avatar>
+                      <Avatar className={colorCode(row.color)}>{row.initial}</Avatar>
                       <p className="m-0 pl-4">{row.name}</p>
                     </div>
                   </TableCell>
