@@ -1,8 +1,13 @@
-export interface employeeData {
+export interface EmployeeData {
   data: {
-    id: number;
+    id: string;
     name: string;
     email: string;
-    number: string;
+    phone: string;
+    initial: string;
+    hireDate: string;
+    color: string;
+    isCalendarVisible: boolean;
+    role: string;
   }[];
 }

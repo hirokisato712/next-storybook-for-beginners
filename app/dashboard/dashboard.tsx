@@ -8,6 +8,7 @@ export default function Dashboard({
   deposit,
   order,
 }: Readonly<{ chart: ChartData; deposit: DepositData; order: OrderData }>) {
+  console.log(order);
   return (
     <div className="grid place-content-center">
       <div className="grid w-[1200px] grid-cols-3 place-content-center justify-center">
