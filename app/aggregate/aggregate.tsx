@@ -18,31 +18,35 @@ import {
 import { AggregateDate } from './type';
 
 export default function Aggregate({ aggregate }: Readonly<{ aggregate: AggregateDate }>) {
-  console.log(aggregate.data);
+  const currentYear = new Date().getFullYear().toString();
+  const currentMonth = (new Date().getMonth() + 1).toString();
+
   return (
     <>
       <Typography component="h1" variant="h6" color="primary" className="flex items-center justify-center font-bold">
         工数集計
       </Typography>
       <FormControl className="mb-2 h-8 flex-row gap-2">
-        <Select className="h-8 w-32">
-          <MenuItem value={0}>2024年</MenuItem>
-          <MenuItem value={0}>2023年</MenuItem>
-          <MenuItem value={0}>2022年</MenuItem>
+        <Select className="h-8 w-32" defaultValue={currentYear}>
+          <MenuItem value={currentYear} selected>
+            {currentYear}年
+          </MenuItem>
+          <MenuItem value={(parseInt(currentYear) - 1).toString()}>{parseInt(currentYear) - 1}年</MenuItem>
+          <MenuItem value={(parseInt(currentYear) - 2).toString()}>{parseInt(currentYear) - 2}年</MenuItem>
         </Select>
-        <Select className="h-8 w-32">
-          <MenuItem value={0}>1月</MenuItem>
-          <MenuItem value={0}>2月</MenuItem>
-          <MenuItem value={0}>3月</MenuItem>
-          <MenuItem value={0}>4月</MenuItem>
-          <MenuItem value={0}>5月</MenuItem>
-          <MenuItem value={0}>6月</MenuItem>
-          <MenuItem value={0}>7月</MenuItem>
-          <MenuItem value={0}>8月</MenuItem>
-          <MenuItem value={0}>9月</MenuItem>
-          <MenuItem value={0}>10月</MenuItem>
-          <MenuItem value={0}>11月</MenuItem>
-          <MenuItem value={0}>12月</MenuItem>
+        <Select className="h-8 w-32" defaultValue={currentMonth}>
+          <MenuItem value={'1'}>1月</MenuItem>
+          <MenuItem value={'2'}>2月</MenuItem>
+          <MenuItem value={'3'}>3月</MenuItem>
+          <MenuItem value={'4'}>4月</MenuItem>
+          <MenuItem value={'5'}>5月</MenuItem>
+          <MenuItem value={'6'}>6月</MenuItem>
+          <MenuItem value={'7'}>7月</MenuItem>
+          <MenuItem value={'8'}>8月</MenuItem>
+          <MenuItem value={'9'}>9月</MenuItem>
+          <MenuItem value={'10'}>10月</MenuItem>
+          <MenuItem value={'11'}>11月</MenuItem>
+          <MenuItem value={'12'}>12月</MenuItem>
         </Select>
         <Button variant="outlined" className="h-auto w-10">
           表示
