@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from '@storybook/react';
 
-import Component from './employees';
+import Component from './mainlist';
 
 const meta = {
-  title: 'employees/Employee',
+  title: 'mainlist/mainlist',
   component: Component,
   args: {
     employee: {
@@ -32,13 +32,29 @@ const meta = {
         },
       ],
     },
+    partner: {
+      data: [
+        {
+          id: '1',
+          name: '株式会社テスト',
+          initial: 'T',
+          phone: '090-1234-5678',
+        },
+        {
+          id: '2',
+          name: '株式会社テスト2',
+          initial: 'T',
+          phone: '090-1234-5678',
+        },
+      ],
+    },
   },
   parameters: {
     layout: 'centered',
   },
   decorators: [
     (Story) => (
-      <div className="">
+      <div className="w-[1000px]">
         <Story />
       </div>
     ),
@@ -46,4 +62,4 @@ const meta = {
 } satisfies Meta<typeof Component>;
 export default meta;
 
-export const Employee: StoryObj<typeof meta> = {};
+export const MainList: StoryObj<typeof meta> = {};
