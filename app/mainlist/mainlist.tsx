@@ -77,15 +77,6 @@ export default function MainList({ employee, partner }: Readonly<{ employee: Emp
               社員を登録
             </Button>
           </div>
-        </TabPanel>
-        <TabPanel value={value} index={1}>
-          <div className="flex flex-row-reverse">
-            <Button variant="contained" endIcon={<AddIcon />}>
-              協力会社を登録
-            </Button>
-          </div>
-        </TabPanel>
-        <TabPanel value={value} index={0}>
           <TableContainer>
             <Table size="small" className="">
               <TableHead>
@@ -117,6 +108,11 @@ export default function MainList({ employee, partner }: Readonly<{ employee: Emp
           </TableContainer>
         </TabPanel>
         <TabPanel value={value} index={1}>
+          <div className="flex flex-row-reverse">
+            <Button variant="contained" endIcon={<AddIcon />}>
+              協力会社を登録
+            </Button>
+          </div>
           <TableContainer>
             <Table size="small" className="">
               <TableHead>
