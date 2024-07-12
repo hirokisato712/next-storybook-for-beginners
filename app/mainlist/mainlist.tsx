@@ -85,9 +85,9 @@ export default function MainList({ employee, partner }: Readonly<{ employee: Emp
             </Button>
           </div>
         </TabPanel>
-        <TableContainer>
-          <Table size="small" className="">
-            <TabPanel value={value} index={0}>
+        <TabPanel value={value} index={0}>
+          <TableContainer>
+            <Table size="small" className="">
               <TableHead>
                 <TableRow className="">
                   <TableCell className="w-1/3 font-semibold text-blue-800">社員名</TableCell>
@@ -113,8 +113,12 @@ export default function MainList({ employee, partner }: Readonly<{ employee: Emp
                   </TableRow>
                 ))}
               </TableBody>
-            </TabPanel>
-            <TabPanel value={value} index={1}>
+            </Table>
+          </TableContainer>
+        </TabPanel>
+        <TabPanel value={value} index={1}>
+          <TableContainer>
+            <Table size="small" className="">
               <TableHead>
                 <TableRow>
                   <TableCell className="w-1/2 font-semibold text-blue-800">協力会社名</TableCell>
@@ -138,9 +142,9 @@ export default function MainList({ employee, partner }: Readonly<{ employee: Emp
                   </TableRow>
                 ))}
               </TableBody>
-            </TabPanel>
-          </Table>
-        </TableContainer>
+            </Table>
+          </TableContainer>
+        </TabPanel>
       </Paper>
     </>
   );
