@@ -6,7 +6,6 @@ import Aggregate from './aggregate';
 
 export default async function Page() {
   const aggregate = await getAggregate();
-  console.log(aggregate);
   return <Aggregate aggregate={aggregate} />;
 }
 
