@@ -79,8 +79,8 @@ export default function SettingHoliday({ settingholiday }: Readonly<{ settinghol
         </Button>
       </div>
       <div className="grid gap-5">
-        <HolidayTable str="祝日" settingholiday={{ data: tableA }} />
-        <HolidayTable str="公休" settingholiday={{ data: tableB }} />
+        <HolidayTable str="公休" settingholiday={{ data: tableA }} />
+        <HolidayTable str="祝日" settingholiday={{ data: tableB }} />
       </div>
     </div>
   );
