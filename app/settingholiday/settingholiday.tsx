@@ -16,7 +16,7 @@ import {
 
 import { SettingHolidayDate } from './type';
 
-function holidayTable(str: string, settingholiday: SettingHolidayDate) {
+function HolidayTable({ str, settingholiday }: { str: string; settingholiday: SettingHolidayDate }) {
   {
     return (
       <div className="grid grid-cols-4">
@@ -56,8 +56,6 @@ export default function SettingHoliday({ settingholiday }: Readonly<{ settinghol
   const currentYear = new Date().getFullYear().toString();
   const tableA = settingholiday.data.filter((row) => row.isNationalHoliday);
   const tableB = settingholiday.data.filter((row) => !row.isNationalHoliday);
-  const holidayTableA = holidayTable('公休', { data: tableA });
-  const holidayTableB = holidayTable('祝日', { data: tableB });
   return (
     <div className="grid gap-3">
       <Typography component="h1" variant="h6" color="primary" className="flex justify-center font-bold">
@@ -81,8 +79,8 @@ export default function SettingHoliday({ settingholiday }: Readonly<{ settinghol
         </Button>
       </div>
       <div className="grid gap-5">
-        {holidayTableA}
-        {holidayTableB}
+        <HolidayTable str="祝日" settingholiday={{ data: tableA }} />
+        <HolidayTable str="公休" settingholiday={{ data: tableB }} />
       </div>
     </div>
   );
