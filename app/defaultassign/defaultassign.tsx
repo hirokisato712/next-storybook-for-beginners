@@ -24,24 +24,26 @@ export default function DefaultAssign({ defaultAssign }: Readonly<{ defaultAssig
       <Typography component="h1" variant="h4" color="primary" className="flex items-center justify-center font-bold">
         デフォルトアサイン設定
       </Typography>
-      <Paper className="grid h-auto w-full grid-cols-8 gap-6">
-        <div className="col-span-6 grid grid-cols-1 gap-y-12">
+      <Paper className="grid h-auto w-full grid-cols-8 place-content-center justify-center gap-6">
+        <div className="col-span-6 grid grid-cols-1 place-content-center justify-center gap-y-12">
           <Typography component="h1" variant="h6" color="primary" className="h-20 content-end pl-9 font-bold">
             休日/平日設定
           </Typography>
-          <div className="grid h-auto w-full grid-cols-4 gap-3 p-3">
-            {weekday.map((day, index) => (
-              <div key={index} className="justify-center">
-                <div className={`h-12 content-center text-center ${defaultData[index] ? 'text-red-600' : ''}`}>
-                  {day}
+          <div className="flex justify-center">
+            <div className="grid h-auto w-5/6 grid-cols-4 gap-3 p-3">
+              {weekday.map((day, index) => (
+                <div key={index} className="place-content-center justify-center">
+                  <div className={`h-12 content-center text-center ${defaultData[index] ? 'text-red-600' : ''}`}>
+                    {day}
+                  </div>
+                  <Card
+                    className={`h-32 content-center border border-solid text-center font-extrabold ${defaultData[index] ? 'border-red-600 bg-red-200 text-red-600' : 'border-gray-300 bg-gray-100'}`}
+                  >
+                    {defaultData[index] ? judge[1] : judge[0]}
+                  </Card>
                 </div>
-                <Card
-                  className={`h-32 content-center border border-solid text-center font-extrabold ${defaultData[index] ? 'border-red-600 bg-red-200 text-red-600' : 'border-gray-300 bg-gray-100'}`}
-                >
-                  {defaultData[index] ? judge[1] : judge[0]}
-                </Card>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
           <div className="mb-16 ml-6 justify-center">
             <p className="m-0">曜日をクリックすると平日と休日を切り替えることができます。</p>
