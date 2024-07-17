@@ -17,7 +17,7 @@ export default function NightShift({ nightshift }: Readonly<{ nightshift: NightS
         夜間勤務集計
       </Typography>
       <div className="flex h-12 items-center bg-indigo-50 text-xl">
-        <p className="text-gray-400">集計期間 :</p>
+        <p className="ml-6 text-gray-400">集計期間 :</p>
         <p>
           {nowDate.getFullYear()}/{nowDate.getMonth() + 1}/01 ~ {nowDate.getFullYear()}/{nowDate.getMonth() + 1}/
           {nowDate.getDate()}
