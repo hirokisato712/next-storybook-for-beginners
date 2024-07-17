@@ -24,9 +24,9 @@ export default function DefaultAssign({ defaultAssign }: Readonly<{ defaultAssig
       <Typography component="h1" variant="h4" color="primary" className="flex items-center justify-center font-bold">
         デフォルトアサイン設定
       </Typography>
-      <Paper className="grid h-auto w-full grid-cols-5 gap-6">
-        <div className="col-span-4 grid grid-cols-1 gap-y-12">
-          <Typography component="h1" variant="h6" color="primary" className="font-bold">
+      <Paper className="grid h-auto w-full grid-cols-8 gap-6">
+        <div className="col-span-6 grid grid-cols-1 gap-y-12">
+          <Typography component="h1" variant="h6" color="primary" className="h-20 content-end pl-9 font-bold">
             休日/平日設定
           </Typography>
           <div className="grid h-auto w-full grid-cols-4 gap-3 p-3">
@@ -43,16 +43,21 @@ export default function DefaultAssign({ defaultAssign }: Readonly<{ defaultAssig
               </div>
             ))}
           </div>
-          <div className="mb-16 justify-center">
+          <div className="mb-16 ml-6 justify-center">
             <p className="m-0">曜日をクリックすると平日と休日を切り替えることができます。</p>
             <p className="m-0">休日として設定された曜日はデフォルトで休に配置されます。</p>
           </div>
         </div>
-        <div className="relative flex flex-col pr-5">
-          <Typography component="h1" variant="h6" color="primary" className="font-bold">
+        <div className="relative col-span-2 flex w-full flex-col pr-5">
+          <Typography component="h1" variant="h6" color="primary" className="h-20 content-end pl-9 font-bold">
             平日アサイン先
           </Typography>
-          <TextField className="mt-6 h-4 w-full" variant="outlined" label="名称" />
+          <TextField
+            className="mt-6 h-4 w-full"
+            variant="outlined"
+            label="名称"
+            defaultValue={defaultAssign.data.weekdayAssign}
+          />
           <Button variant="contained" className="absolute bottom-14 right-5">
             変更を保存
           </Button>
